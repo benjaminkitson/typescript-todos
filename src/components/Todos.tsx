@@ -1,4 +1,8 @@
-const Todos: React.FC<{ items: string[]}> = ({ items }) => {
+type TodosProps = {
+    items: string[]
+}
+
+export default function Todos({ items }: TodosProps) {
     return (
         <ul>
             {items.map((item) => (
@@ -7,5 +11,3 @@ const Todos: React.FC<{ items: string[]}> = ({ items }) => {
         </ul>
     );
 };
-
-export default Todos;
